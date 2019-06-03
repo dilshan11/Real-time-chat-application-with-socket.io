@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-5 " style="border-style: solid; border-color: green; ">
+      <div style="height: 300px">
+         
+         <ul class="list-group">
+            <li class="list-group-item"  *ngFor="let ss of ab">{{ss.name}}:{{ss.message}}</li>
+          </ul>
+      </div>
+      <div class="yata"> 
+      <form [formGroup]="reg">
+        <div class="form-group">
+          <label class="namelabel" >name</label>
+          <input formControlName="ema" type="text" class="form-control namelabel"    aria-describedby="emailHelp"
+            placeholder="name">
+        </div>
+        <div class="form-group">
+          <label class="namelabel">message</label>
+          <input formControlName="pas" type="text" class="form-control namelabel" aria-describedby="emailHelp"
+            placeholder="messsage">
+        </div>
+
+        <button class="btn btn-primary" (click)=send()>send</button>
+
+      </form>
+    </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
